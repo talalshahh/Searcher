@@ -1,13 +1,15 @@
 import React, { createContext, useContext, useState } from "react";
 
 const ResultContext = createContext();
+const apiKey = process.env.REACT_APP_API_KEY;
+const apiHost = process.env.REACT_APP_API_HOST;
 
-const baseUrl = "https://google-search74.p.rapidapi.com/";
+const baseUrl = process.env.REACT_APP_BASE_URL;
 const options = {
 	method: "GET",
 	headers: {
-		"x-rapidapi-key": "e5a1e8f3c6msh1218268b288bf76p141a13jsn86cf30ed3382",
-		"x-rapidapi-host": "google-search74.p.rapidapi.com",
+		"x-rapidapi-key": apiKey,
+		"x-rapidapi-host": apiHost,
 	},
 };
 
